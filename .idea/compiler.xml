@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DAppSter" />
+        <module name="DAppSterJava" />
         <module name="TestChain1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="DAppSter" target="1.8" />
+      <module name="DAppSterJava" target="1.8" />
       <module name="TestChain1" target="1.8" />
     </bytecodeTargetLevel>
   </component>

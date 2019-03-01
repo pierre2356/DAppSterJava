@@ -44,7 +44,7 @@ class SearchActivity extends GridPane {
         TextField searchQuery = new TextField(); searchQuery.setPromptText("Enter an author, keyword: ");
         Button searchButton = new Button("Search");
 
-        ListView answers = new ListView();
+        ListView<String> answers = new ListView<>();
 
         Button upload = new Button("Upload a file");
         Button update = new Button( "Update a file");
@@ -61,7 +61,7 @@ class SearchActivity extends GridPane {
                 searchAuthor(keyword);
             }
 
-            ObservableList list = FXCollections.observableList(new ArrayList<>(descToId.keySet()));
+            ObservableList<String> list = FXCollections.observableList(new ArrayList<>(descToId.keySet()));
 
             answers.setItems(list);
 

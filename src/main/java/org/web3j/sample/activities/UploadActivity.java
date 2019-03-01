@@ -17,7 +17,6 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.security.MessageDigest;
-import java.util.HashMap;
 
 class UploadActivity extends GridPane {
 

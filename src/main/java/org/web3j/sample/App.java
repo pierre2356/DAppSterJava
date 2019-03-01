@@ -33,12 +33,20 @@ public class App extends Application {
 
         Scene scene = new Scene(new Pane());
 
-        storage = new HardStorage(getClass().getClassLoader().getResource(DATA_FILE_NAME).getFile());
+        try {
+            storage = new HardStorage(getClass().getClassLoader().getResource(DATA_FILE_NAME).getFile());
+        } catch (NullPointerException e) {
+            System.out.println("Error while loading storage file");
+            e.printStackTrace();
+        }
+
+
 
         try {
             web3j = Web3j.build(new HttpService("https://rinkeby.infura.io/da1e42ce2fff4620b8c681094df78d94"));
         } catch (Exception e) {
             System.out.println("Error while loading web3j");
+            e.printStackTrace();
         }
 
         scene.setRoot(new ConnectionActivity(primaryStage, scene));

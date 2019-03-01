@@ -25,7 +25,6 @@ import java.math.BigInteger;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.security.PrivateKey;
-import java.util.ArrayList;
 
 
 public class LoadingActivity extends GridPane {
@@ -68,7 +67,7 @@ public class LoadingActivity extends GridPane {
         this.scene = scene;
         this.primaryStage = primaryStage;
 
-        this.username = username;
+        LoadingActivity.username = username;
 
         portNo = Integer.valueOf(storage.getValue(username, StorageType.PortNumber));
         IP = storage.getValue(username, StorageType.IP);
